@@ -17,7 +17,19 @@ public class CalendarioBasico {
     }
     
     public String obtenerFecha() {
-        String fecha = (dia + "-" + mes + "-" + ano);
+        String diaUnDigito = "";
+        String mesUnDigito = "";
+        String anoUnDigito = "";
+        if (dia < 10) {
+            diaUnDigito = "0";
+        }
+        if (mes < 10) {
+            mesUnDigito = "0";
+        }
+        if (ano < 10) {
+            anoUnDigito = "0";
+        }
+        String fecha = (diaUnDigito + dia + "-" + mesUnDigito + mes + "-" + anoUnDigito + ano);
         return fecha;
     }
     
